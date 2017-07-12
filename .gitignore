@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+build
+out
+.idea/*
+.gradle
+*.iws
+*.ipr
+*.iml
+node_modules
+TestImpl.java
+*.min.js
+.gitlab-ci.yml

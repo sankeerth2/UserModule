@@ -1,0 +1,66 @@
+.field-wrap-left {
+    position: relative;
+    margin-top: 1px
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    top: 50%;
+}
+
+form > div {
+    position: relative;
+    overflow: hidden;
+}
+
+.dialog-footer {
+    margin-top: 35px;
+}
+
+.dialog-title {
+    color: #3688e6;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.rc-dialog-body {
+    overflow: auto;
+}
+
+.role-container {
+    padding-left: 5px;
+    border: 2px ridge;
+}
+
+.permissions-container {
+    padding-left: 5px;
+    border: 2px ridge;
+}
+
+.container-title {
+    color: #3688e6;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.input-validation-error-message {
+    color: #e20029;
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.rc-dialog-footer {
+    margin-top: 15px;
+}
+
+p {
+    margin-top: 1px;
+    margin-bottom: 0;
+}

@@ -1,0 +1,156 @@
+$body-bg: #c1bdba;
+$form-bg: #13232f;
+$white: #ffffff;
+$main: #1ab188;
+$main-light: lighten($main, 5%);
+$main-dark: darken($main, 5%);
+$gray-light: #a0b3b0;
+$gray: #ddd;
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: $body-bg;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $main;
+  transition: .5s ease;
+  &:hover {
+    color: $main-dark;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: $main;
+  font-weight: $thin;
+  margin: 0 0 40px;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+.footer {
+  display:flex;
+  justify-content: space-between;
+}
+
+form {
+  background: rgba($form-bg, .9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: $br;
+  box-shadow: 0 4px 10px 4px rgba($form-bg, .3);
+  > div {
+    position: relative;
+    overflow: hidden;
+  }
+  input,
+  textarea {
+    width: 100%;
+    border: 2px solid $gray-light;
+    resize: vertical;
+    background: none;
+    position: relative;
+    color: $white;
+    size: 100px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 8px 12px;
+    outline: 0;
+    &:focus {
+      outline: 0;
+      border-color: #1ab188;
+    }
+    &:focus + label {
+      background: #f06d06;
+      color: white;
+      font-size: 70%;
+      padding: 1px 6px;
+      z-index: 2;
+      text-transform: uppercase;
+    }
+    &:valid + label {
+      background: #f06d06;
+      color: white;
+      font-size: 80%;
+      padding: 1px 6px;
+      z-index: 2;
+      text-transform: uppercase;
+    }
+  }
+  label {
+    transition: // not padding
+            background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+    position: absolute;
+    color: #999;
+    padding: 7px 6px;
+  }
+  textarea {
+    display: block;
+    resize: vertical;
+  }
+  .forgot {
+    margin-top: -20px;
+    text-align: right;
+  }
+  button {
+    display: block;
+    width: 100%;
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 15px 0;
+    font-size: 2rem;
+    font-weight: $bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: $main;
+    color: $white;
+    transition: all.5s ease;
+    -webkit-appearance: none;
+    &:hover,
+    &:focus {
+      background: $main-dark;
+    }
+  }
+}
+
+form.login {
+  label {
+    top: 2px;
+    right: 100%;
+    width: 100%;
+    margin-right: -100%;
+    bottom: 2px;
+  }
+  input:focus + label,
+  textarea:focus + label {
+    right: 0;
+    margin-right: 2px;
+    width: 40%;
+    padding-top: 5px;
+  }
+  input:valid + label,
+  textarea:valid + label {
+    right: 0;
+    margin-right: 0;
+    width: 40%;
+    padding-top: 5px;
+  }
+}

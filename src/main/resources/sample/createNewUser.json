@@ -1,0 +1,13 @@
+{
+  "firstName":"#firstName",
+  "lastName":"#lastName",
+  "mobile":"#mobile",
+  "email":"#email",
+  "role":{
+    "name":"#role"
+  },
+  "permissions":[
+
+    {"permission":"#permission"}
+  ]
+}

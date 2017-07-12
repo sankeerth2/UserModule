@@ -1,0 +1,244 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.43em;
+    color: #a0b3b0;
+    background-color: #c1bdba;
+}
+
+.blue {
+    color: #185875;
+}
+
+.yellow {
+    color: #FFF842;
+}
+
+.container thead {
+    background: #fff;
+}
+
+.wave > div {
+    background-color: #f06d06;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    text-align: center;
+    -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+    animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.fa-times {
+    color: #E61515;
+    cursor: hand;
+    cursor: pointer;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    color: #185875;
+}
+
+.container th {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    color: #185875;
+}
+
+.container td {
+    font-weight: normal;
+    font-size: 1em;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+    text-align: center;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+    display: table;
+    padding: 0 0 8em 0;
+}
+
+.container td,
+.container th {
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+}
+
+/* Background-color of the odd rows */
+
+.container tr:nth-child(odd) {
+    background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+
+.container tr:nth-child(even) {
+    background-color: #2C3446;
+}
+
+.container th {
+    background-color: #1F2739;
+}
+
+.container td:first-child {
+    color: #1ab188;
+}
+
+.container tr:hover {
+    background-color: #464A52;
+    -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+    box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+@media (max-width: 800px) {
+    .container td:nth-child(4),
+    .container th:nth-child(4) {
+        display: none;
+    }
+}
+
+td {
+    text-align: center;
+    /* center checkbox horizontally */
+}
+
+.active {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    margin: auto;
+    background: #fcfff4;
+    background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.active label {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+    background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+
+.active label:after {
+    content: '';
+    width: 16px;
+    height: 8px;
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    border: 3px solid #fcfff4;
+    border-top: none;
+    border-right: none;
+    background: transparent;
+    opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.active label:hover::after {
+    opacity: 0.3;
+}
+
+.active input[type=checkbox] {
+    visibility: hidden;
+}
+
+.active input[type=checkbox]:checked + label:after {
+    opacity: 1;
+}
+
+.search {
+    text-align: right;
+    margin-right: 2px;
+    width: 93%;
+    padding: 0 0 5px;
+    margin-top: 10px;
+}
+
+.search-box {
+    border: 2px solid #a0b3b0;
+    border-radius: 15px;
+    resize: vertical;
+    width: 40%;
+    font-size: 20px;
+    font-weight: 300;
+    background: #FFF;
+    color: #000;
+    margin-right: 10px;
+    padding: 0.5rem 1rem;
+    outline: 0;
+    box-shadow: none;
+}
+
+.search-box input[type=text]:focus {
+    outline: 0;
+    border-color: #1ab188;
+}
+
+.search-box input[type=text]:-moz-placeholder {
+    box-shadow: none !important;
+}
+
+.search-box input[type=text]:invalid {
+    box-shadow: 0 0 3px lime;
+}
+
+button {
+    border: 10px;
+    border-radius: 15px;
+    padding: 1rem 1rem;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: #1ab188;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+    outline: 0;
+}
+
+.scrollTable {
+    overflow-y: auto;
+    width: 100%;
+    height: 85%;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+}
+
+.footer, .push {
+    height: 4em;
+    font-weight: 600;
+    color: #0E1119;
+}
+

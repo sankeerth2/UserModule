@@ -1,0 +1,4 @@
+create table employee(EmpID int NOT NULL AUTO_INCREMENT PRIMARY KEY, OrgId varchar(5) NOT NULL, UserId varchar(8) NOT NULL UNIQUE, UserName varchar(25) UNIQUE, Password varchar(60) NOT NULL, FirstName varchar(25) NOT NULL, LastName varchar(25) NOT NULL, PhoneNumber varchar(12), IsAdmin TINYINT  NOT NULL DEFAULT 0, IsSuperAdmin TINYINT  NOT NULL DEFAULT 0)
+
+
+create table organization (OrgId int NOT NULL AUTO_INCREMENT PRIMARY KEY, OrgName varchar(25) NOT NULL, OrgAddress varchar(75) NOT NULL, OrgContactNumber varchar(12) NOT NULL, OrgEmail varchar(25) NOT NULL)

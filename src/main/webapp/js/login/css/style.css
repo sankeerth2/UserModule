@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #c1bdba;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #1ab188;
+  transition: .5s ease;
+}
+a:hover {
+  color: #179b77;
+}
+
+h1 {
+  text-align: center;
+  color: #1ab188;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.wave > div {
+  background-color: #f06d06;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  text-align: center;
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.centered {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+}
+
+form {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+form > div {
+  position: relative;
+  overflow: hidden;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+  background: none;
+  position: relative;
+  color: #ffffff;
+  size: 100px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 8px 12px;
+  outline: 0;
+}
+form input:focus,
+form textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+form input:focus + label,
+form textarea:focus + label {
+  background: #f06d06;
+  color: white;
+  font-size: 70%;
+  padding: 1px 6px;
+  z-index: 2;
+  text-transform: uppercase;
+}
+form input:valid + label,
+form textarea:valid + label {
+  background: #f06d06;
+  color: white;
+  font-size: 70%;
+  padding: 1px 6px;
+  z-index: 2;
+  text-transform: uppercase;
+}
+form label {
+  transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+  position: absolute;
+  color: #999;
+  padding: 7px 6px;
+}
+form textarea {
+  display: block;
+  resize: vertical;
+}
+form .forgot {
+  margin-top: -20px;
+  text-align: right;
+}
+form button {
+  display: block;
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+form button:hover, form button:focus {
+  background: #179b77;
+}
+
+form.login label {
+  top: 2px;
+  right: 100%;
+  width: 100%;
+  margin-right: -100%;
+  bottom: 2px;
+}
+form.login input:focus + label,
+form.login textarea:focus + label {
+  right: 0;
+  margin-right: 2px;
+  width: 40%;
+  padding-top: 5px;
+}
+form.login input:valid + label,
+form.login textarea:valid + label {
+  right: 0;
+  margin-right: 2px;
+  width: 40%;
+  padding-top: 5px;
+}
+
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+.footer, .push {
+  height: 4em;
+  font-weight: 600;
+  color: #0E1119;
+}
+
