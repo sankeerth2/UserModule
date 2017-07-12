@@ -53,6 +53,11 @@ public class InvitationRepositoryImpl implements InvitationRepository {
         return jdbcTemplate.update(createInvitationQuery, invitationId, userLinkId) > 0;
     }
 
+    /**
+     *
+     * @param invitationId
+     * @return
+     */
     @Override
     public Invitation findInvitationByInvitationId(String invitationId) {
         try {
