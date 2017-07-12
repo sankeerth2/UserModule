@@ -46,6 +46,11 @@ public class InvitationRepositoryImpl implements InvitationRepository {
     private final String deleteInvitationByUserLink = "DELETE FROM " + invitationTable + " WHERE user_link_id = ? and is_usable = 1";
 
 
+    /**
+     *
+     * @param userLinkId
+     * @return
+     */
     @Override
     public boolean createNewInvitation(String userLinkId) {
         String invitationId = generateRandomId();
